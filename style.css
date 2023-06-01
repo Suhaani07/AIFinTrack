@@ -1,0 +1,138 @@
+/*half circle to show balance amount*/
+#balance {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #126ded7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+/*inrease h1 tag size and customize it in center with margin top*/
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 100px;
+    /*align text in center*/
+    text-align: center;
+    /*add color and box shadow*/
+    color: #1e135d;
+    box-shadow: 0 0 10px #1a73e8;
+    display: inline;
+
+}
+/* //align canvas besides balance */
+#myChart {
+    /* //alogn ceentre */
+    text-align: center;
+
+}
+/* //align h2 below h1 */
+h2 {
+    text-align: center;
+    color: #1e135d;
+}
+/* //customize button */
+#submit {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #1e135d;
+    margin-top: 20px;
+    background-color: #1e135d;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    /* //make button shape round */
+    border-radius: 50px;
+}
+/*customize button on hover*/
+#submit:hover {
+    background-color: #1a73e8;
+    cursor: pointer;
+}
+/* //add button animation  */
+#submit:active {
+    transform: scale(0.98);
+}
+/* //align input class as center */
+
+.inputfields {
+    justify-content: center;
+    align-items: center;
+}
+/*customize input field*/
+input {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #1e135d;
+
+    /* //add margin on all sides */
+    margin: 10px 10px 10px 10px;
+
+}
+/*customize label*/
+label {
+    color: #1e135d;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* //table occupies 100% width */
+#table {
+    /* //center align table */
+    margin-left: 35%;
+    margin-right: auto;
+    /* //width same even after data is entered in table */
+   position: absolute;
+}
+
+
+/*customize table header*/
+th {
+    text-align: left;
+    padding: 8px;
+    background-color: #1e135d;
+    color: #fff;
+    
+}
+/*customize table data*/
+td {
+    text-align: left;
+    padding: 8px;
+}
+/*customize table row*/
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* //full width of table */
+    width: 100%;
+}
+/*customize table row*/
+tr:hover {
+    background-color: #ddd;
+
+}
+/*customize table data*/
+td a {
+    text-decoration: none;
+    color: #1e135d;
+    font-weight: 500;
+}
+/*customize table data*/
+td a:hover {
+    color: #1a73e8;
+}
+/*customize table data*/
+
+
+/* suitable background color for the body */
+body {
+    background-color: #ffffff;
+}
+/*reduce the size of canvas*/
+canvas{
+    width: 90% !important;
+    height: 300px !important;
+}

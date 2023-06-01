@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--link javascript file-->
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <center>
+    <!--h1 displaying Personal Finance Manager-->
+    <div>
+        <!-- //align in center -->
+   
+
+    <h1>Personal Finance Manager</h1>
+    
+    <!--display balance amount in semi circle shape-->
+    <!--display value in balance variable-->
+        <h1 id="balance">0</h1>
+    <h2>Balance</h2>
+    
+    <!-- //add line chart using chartjs cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+
+    <!--accept income and expense amount and call javascript function to calculate balance-->
+    <!-- //add div tag with input class -->
+    <div class="inputfields">
+    <input type="number" name="income" placeholder="Income" id="income">
+    <!-- accept income description -->
+    <input type="text" name="income_desc" placeholder="Income Description" id="income_desc">
+        <input type="number" name="expense" placeholder="Expense" id="expense">
+        <!-- accept expense description -->
+        <input type="text" name="expense_desc" placeholder="Expense Description" id="expense_desc">
+        </div>
+       <input type="button" name="submit" value="Submit" id="submit" onclick="addRow()">
+<!--add rows to display income and expense amount-->
+    <table id="table">
+        <tr>
+            <th>Income</th>
+            <!-- //add income description -->
+            <th>Income Description</th>
+            <th>Expense</th>
+            <!-- //add expense description -->
+            <th>Expense Description</th>
+        </tr>
+    </table>
+
+    <!-- //new chart object -->
+    
+    <script>
+        //balance array to store balance amount
+        var balance = [];
+        //reload chart every 1 second
+       function reload(){
+
+        //get current balance amount
+        var current_balance = document.getElementById("balance").innerHTML;
+        //push balance amount to balance array
+        balance.push(current_balance);
+        var ctx = document.getElementById("myChart").getContext('2d');
+        
+        var myChart = new Chart(ctx, {
+            //type of chart
+            type: 'line',
+            data: {
+                //labels for x axis
+                //datasets for y axis
+                datasets: [{
+                    //label for y axis
+                    //data for y axis
+                    
+                    data: balance,
+                    //background color for line chart
+                    backgroundColor: [
+                        '#126ded7d'
+                    ],
+                    //border color for line chart
+                    borderColor: [
+                        '#126ded7d'
+                    ],
+                    //border width for line chart
+                    borderWidth: 1
+                }]
+            },
+            
+            //options for line chart
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            //begin at 0
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+        };
+    </script>
+</center>
+</body>
+</html>
